@@ -137,7 +137,8 @@ if __name__ == '__main__':
         
         for i in range(len(DNS_VIEW)):
             view = DNS_VIEW[i][1]
-            view_acl = DNS_VIEW[i][8]
+            view_acl = DNS_VIEW[i][9]
+            #view_acl = DNS_VIEW[i][8]  #3.9版本为8
 
             return_code = t.creat_view(view,view_acl)
             t.loger('DNS_VIEW: %s return_code is %s'%(view, return_code))
@@ -191,4 +192,5 @@ if __name__ == '__main__':
             t.loger('DNS_SHARED_ZONES: %s return_code is %s'%(auth_zone, return_code))
         t.loger('DNS_SHARED_ZONES: is created!')
         conn.close()
+
 
